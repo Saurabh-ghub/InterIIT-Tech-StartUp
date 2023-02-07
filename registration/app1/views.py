@@ -28,9 +28,10 @@ def HomePage(request):
     mentor_list=[]
     for interest in mylist:
         for mentor in all_mentors_interests:
-            skills = mentor.interest.split(',')
-            if interest in skills:
-                mentor_list.append(mentor.email)
+            skills = (mentor.interest.split(','))
+            for skill in skills:
+                if (skill.capitalize()) ==(interest.capitalize()):
+                    mentor_list.append(mentor.email)
     
     unique_mentor_list = list(set(mentor_list))
     

@@ -160,16 +160,18 @@
 
             {% comment %} <a href="{% url 'mentors' %}" class="btn btn-primary">Get Mentors</a> {% endcomment %}
     
-            <div id="example-div" class="  d-flex aligns-items-center justify-content-center" >
-              
-              {% if profession == "Mentee"%}
-            <p><a href="{% url 'index' %}" class="btn btn-primary">Update Interests</a></p>
-            {% elif profession == "Mentor"%}
-            <p><a href="{% url 'index' %}" class="btn btn-primary">Update Skills</a></p>
-             {%endif%}
+            
           </div>
+          
         </div>
-        </div>
+        <div id="example-div" class="  d-flex aligns-items-center justify-content-center" >
+              
+          {% if profession == "Mentee"%}
+        <p><a href="{% url 'index' %}" class="btn btn-primary">Update Interests</a></p>
+        {% elif profession == "Mentor"%}
+        <p><a href="{% url 'index' %}" class="btn btn-primary">Update Skills</a></p>
+         {%endif%}
+      </div>
       </div>
       
     </section>
