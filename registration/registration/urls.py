@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from app1 import views
+from django.conf import settings #add this
+from django.conf.urls.static import static #add this
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -23,4 +25,6 @@ urlpatterns = [
     path('login/',views.LoginPage,name='login'),
     path('home/',views.HomePage,name='home'),
     path('logout/',views.LogoutPage,name='logout'),
-]
+    path("index/", views.index, name="index")
+    # path("mentors/", views.mentors, name="mentors")
+] 
